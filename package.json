@@ -1,14 +1,21 @@
 {
   "name": "simple-facture",
   "version": "0.1.0",
-  "main": "index.js",
+  "description": "Make french invoices as pdf with all legal requirements",
+  "keywords": [
+    "invoice",
+    "facture",
+    "france",
+    "pdf"
+  ],
+  "main": "src/main.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/main.js"
   },
   "author": "Elias Boukamza",
   "license": "MIT",
   "dependencies": {
-    "date-fns": "^1.30.1",
+    "intl": "^1.2.5",
     "pdfmake": "^0.1.40"
   }
 }

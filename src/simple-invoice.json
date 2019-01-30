@@ -1,0 +1,39 @@
+{
+  "number": "2019-001",
+  "date": "31/01/2019",
+  "company": {
+    "name": "Ta Societe",
+    "address": {
+      "street": "10 rue de la victoire",
+      "zipCode": "75000",
+      "city": "Paris"
+    },
+    "email": "tonemail@tasociete.fr",
+    "legalForm": "EURL",
+    "ape": "0000X",
+    "vat": "FRXX xxxxxxxxx",
+    "founds": "100",
+    "regNumber": "RCS Paris xxx xxx xxx",
+    "siret": "xxx xxx xxx xxxxx",
+    "iban": "FR00 1234 5678 9012 3456 7890 999"
+  },
+  "customer": {
+    "name": "Le nom du client",
+    "address": {
+      "street": "10 rue du boulot",
+      "zipCode": "75000",
+      "city": "Paris"
+    },
+    "vat": "FR12 123 456 789"
+  },
+  "lines": [
+    {
+      "detail": "Conseil en informatique",
+      "endDate": "31/01/2019",
+      "price": 500,
+      "vat": 0.2,
+      "quantity": 20
+    }
+  ],
+  "paymentDelay": 30
+}
