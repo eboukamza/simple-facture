@@ -2,7 +2,7 @@ Simple Facture
 =======
 
 [![Travis](https://travis-ci.org/eboukamza/simple-facture.svg?branch=master)](https://travis-ci.org/eboukamza/simple-facture)
-
+[![Coverage Status](https://coveralls.io/repos/github/eboukamza/simple-facture/badge.svg?branch=master)](https://coveralls.io/github/eboukamza/simple-facture?branch=master)
 
 Outil pour générer des factures en pdf avec toutes les mentions obligatoires en France.
 
