@@ -11,7 +11,8 @@
   "main": "src/main.js",
   "scripts": {
     "start": "node src/main.js",
-    "test": "jest"
+    "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "author": "Elias Boukamza",
   "license": "MIT",
@@ -23,5 +24,8 @@
   "jest": {
     "testEnvironment": "node",
     "collectCoverage": true
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.3"
   }
 }
