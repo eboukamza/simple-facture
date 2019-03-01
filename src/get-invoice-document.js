@@ -91,7 +91,8 @@ const getInvoiceDocument = (invoice) => {
       ],
     pageMargins: [ 40, 80, 40, 60 ],
     defaultStyle: {
-      fontSize: 10
+      fontSize: 10,
+      font: 'Ubuntu'
     },
     styles: {
       notice: {

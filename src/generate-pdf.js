@@ -1,9 +1,9 @@
 const pdfMakePrinter = require('pdfmake/src/printer');
 
 const fonts = {
-  Roboto: {
-    normal: './fonts/Roboto-Regular.ttf',
-    bold: './fonts/Roboto-Bold.ttf'
+  Ubuntu: {
+    normal: './fonts/Ubuntu-Regular.ttf',
+    bold: './fonts/Ubuntu-Bold.ttf'
   }
 };
 
