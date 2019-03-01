@@ -18,14 +18,14 @@
   "license": "MIT",
   "dependencies": {
     "intl": "^1.2.5",
-    "jest": "^24.1.0",
     "pdfmake": "^0.1.40"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.3",
+    "jest": "^24.1.0"
   },
   "jest": {
     "testEnvironment": "node",
     "collectCoverage": true
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.3"
   }
 }
