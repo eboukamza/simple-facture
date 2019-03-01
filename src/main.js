@@ -12,7 +12,7 @@ checkDataFile('.data/invoice.json', invoiceSimple);
 
 // generate invoice
 let invoice = JSON.parse(fs.readFileSync('.data/invoice.json'));
-const outputFileName = `Facture ${invoice.company.name} nª ${invoice.number}.pdf`;
+const outputFileName = `Facture ${invoice.company.name} nº ${invoice.number}.pdf`;
 
 generatePdf(getInvoiceDocument(invoice))
   .then((pdfData) => writeFile(`./out/${outputFileName}`, pdfData))
