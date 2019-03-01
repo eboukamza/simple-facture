@@ -1,3 +1,5 @@
+const { getNetTotal, getGrossTotal, getVATTotal} = require('./calculator.utils');
+
 const Intl = require("intl");
 const formatter = new Intl.NumberFormat('fr-FR', {
   style: 'currency',
@@ -6,15 +8,6 @@ const formatter = new Intl.NumberFormat('fr-FR', {
 });
 
 const RIGHT = 'right';
-
-const getVAT = (line) => line.price * line.quantity * line.vat;
-const getVATTotal = (lines) => lines.reduce((sum, line) => sum + getVAT(line), 0);
-
-const getNet = (line) => line.price * line.quantity;
-const getNetTotal = (lines) => lines.reduce((sum, line) => sum + getNet(line), 0);
-
-const getGross = (line) => getNet(line) + getVAT(line);
-const getGrossTotal = (lines) => lines.reduce((sum, line) => sum + getGross(line), 0);
 
 const printPrice = (price) => formatter.format(price);
 const printPercent = (ratio) => ratio * 100 + ' %';

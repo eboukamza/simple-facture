@@ -10,12 +10,18 @@
   ],
   "main": "src/main.js",
   "scripts": {
-    "start": "node src/main.js"
+    "start": "node src/main.js",
+    "test": "jest"
   },
   "author": "Elias Boukamza",
   "license": "MIT",
   "dependencies": {
     "intl": "^1.2.5",
+    "jest": "^24.1.0",
     "pdfmake": "^0.1.40"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true
   }
 }
