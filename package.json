@@ -1,6 +1,6 @@
 {
   "name": "simple-facture",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Make french invoices as pdf with all legal requirements",
   "keywords": [
     "invoice",
