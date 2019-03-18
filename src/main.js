@@ -11,7 +11,7 @@ let invoiceSimple = JSON.stringify(require('./simple-invoice.json'), null, 2);
 checkDataFile('.data/invoice.json', invoiceSimple);
 
 // generate invoice
-let invoice = JSON.parse(fs.readFileSync('.data/invoice.json'));
+let invoice = JSON.parse(fs.readFileSync('./invoice.json'));
 const outputFileName = `Facture ${invoice.company.name} nº ${invoice.number}.pdf`;
 
 generatePdf(getInvoiceDocument(invoice))

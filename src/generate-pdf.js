@@ -1,9 +1,10 @@
 const pdfMakePrinter = require('pdfmake/src/printer');
+const path = require('path');
 
 const fonts = {
   Ubuntu: {
-    normal: './fonts/Ubuntu-Regular.ttf',
-    bold: './fonts/Ubuntu-Bold.ttf'
+    normal: path.join(__dirname, '../fonts/Ubuntu-Regular.ttf'),
+    bold: path.join(__dirname, '../fonts/Ubuntu-Bold.ttf')
   }
 };
 

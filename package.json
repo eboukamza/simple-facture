@@ -27,5 +27,8 @@
   "jest": {
     "testEnvironment": "node",
     "collectCoverage": true
+  },
+  "bin": {
+    "simple-facture": "./bin/simple-facture"
   }
 }
