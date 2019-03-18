@@ -6,7 +6,8 @@
     "invoice",
     "facture",
     "france",
-    "pdf"
+    "pdf",
+    "generator"
   ],
   "main": "src/main.js",
   "scripts": {
@@ -14,8 +15,24 @@
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
-  "author": "Elias Boukamza",
+  "files": [
+    "src/**",
+    "fonts/**",
+    "bin/**"
+  ],
+  "author": "Elias Boukamza<ezain2t@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eboukamza/simple-facture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eboukamza/simple-facture/issues"
+  },
+  "homepage": "https://github.com/eboukamza/simple-facture#readme",
   "dependencies": {
     "intl": "^1.2.5",
     "pdfmake": "^0.1.40"

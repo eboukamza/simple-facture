@@ -4,8 +4,6 @@ const checkDataDir = (dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, 0o755);
     console.log('Create data directory', dir);
-  } else {
-    console.log('Data directory OK', dir);
   }
 };
 
