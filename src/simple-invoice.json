@@ -1,6 +1,7 @@
 {
-  "number": "2019-001",
-  "date": "31/01/2019",
+  "number": "2020-001",
+  "purchaseOrder": "ref-xxx",
+  "date": "31/01/2020",
   "company": {
     "name": "Ta Societe",
     "address": {
@@ -29,7 +30,7 @@
   "lines": [
     {
       "detail": "Détail de la prestation",
-      "endDate": "31/01/2019",
+      "endDate": "31/01/2020",
       "price": 500,
       "vat": 0.2,
       "quantity": 20

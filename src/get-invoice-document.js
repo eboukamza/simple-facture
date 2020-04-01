@@ -27,6 +27,7 @@ const getInvoiceDocument = (invoice) => {
     content: [
       {text:`Facture nº ${invoice.number}`, style: 'h4'},
       {text: `Date: ${invoice.date}`, style:'h4'},
+      invoice.purchaseOrder ? {text: `Bon de commande: ${invoice.purchaseOrder}`, style:'h4'}: undefined,
       '\n\n',
       {text: 'De', style: 'h4'},
       `${invoice.company.name}`,
