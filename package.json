@@ -13,7 +13,7 @@
   "scripts": {
     "start": "node src/main.js",
     "test": "jest",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "publish": "npm publish"
   },
   "files": [
