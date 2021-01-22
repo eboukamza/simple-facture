@@ -37,6 +37,6 @@ Lancer encore une fois `simple-facture` pour générer votre facture.
 Example
 ----
 
-<a href="https://s3.eu-west-3.amazonaws.com/simple-facture/example-facture.jpeg" alt="Exemple facture" target="_blank">
-  <img src="https://s3.eu-west-3.amazonaws.com/simple-facture/example-facture.jpeg" height=160px/>
+<a href="https://storage.googleapis.com/simple-facture/example-facture.jpeg" alt="Exemple facture" target="_blank">
+  <img src="https://storage.googleapis.com/simple-facture/example-facture.jpeg" height=160px/>
 </a>
