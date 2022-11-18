@@ -1,52 +1,29 @@
 {
   "name": "simple-facture",
-  "version": "0.1.1",
-  "description": "Make french invoices as pdf with all legal requirements",
-  "keywords": [
-    "invoice",
-    "facture",
-    "france",
-    "pdf",
-    "generator"
-  ],
-  "main": "src/main.js",
-  "scripts": {
-    "start": "node src/main.js",
-    "test": "jest",
-    "coveralls": "jest --coverage && coveralls < coverage/lcov.info",
-    "publish": "npm publish"
-  },
-  "files": [
-    "src/**",
-    "fonts/**",
-    "bin/**"
-  ],
-  "author": "Elias Boukamza<ezain2t@gmail.com>",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eboukamza/simple-facture.git"
-  },
-  "bugs": {
-    "url": "https://github.com/eboukamza/simple-facture/issues"
-  },
-  "homepage": "https://github.com/eboukamza/simple-facture#readme",
-  "dependencies": {
-    "intl": "^1.2.5",
-    "pdfmake": "^0.1.40"
-  },
+  "version": "1.0.0",
+  "private": true,
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "5.43.0",
     "coveralls": "^3.0.3",
-    "jest": "^24.1.0"
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "jest": "^29.3.1",
+    "prettier": "^2.7.1",
+    "rollup": "^2.66.1",
+    "rollup-plugin-ts": "^3.0.2",
+    "ts-jest": "29.0.3",
+    "ts-node": "10.9.1",
+    "typescript": "4.5.5"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverage": true
-  },
-  "bin": {
-    "simple-facture": "./bin/simple-facture"
-  }
+  "workspaces": [
+    "simple-facture",
+    "simple-facture-core"
+  ]
 }

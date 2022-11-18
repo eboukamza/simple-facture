@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "importHelpers": true,
+    "lib": ["es2021"],
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "simple-facture-core": ["simple-facture-core/*/src"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "simple-facture",
+  "version": "1.0.0",
+  "description": "Make french invoices as pdf with all legal requirements",
+  "keywords": [
+    "invoice",
+    "facture",
+    "france",
+    "pdf",
+    "generator"
+  ],
+  "main": "dist/main.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "build": "rollup -c rollup.config.js",
+    "test": "echo \" no test yet\"",
+    "lint": "eslint",
+    "publish": "npm publish"
+  },
+  "files": [
+    "src/**",
+    "fonts/**",
+    "bin/**",
+    "dist/**"
+  ],
+  "author": "Elias Boukamza<ezain2t@gmail.com>",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eboukamza/simple-facture.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eboukamza/simple-facture/issues"
+  },
+  "homepage": "https://github.com/eboukamza/simple-facture#readme",
+  "dependencies": {
+    "pdfmake": "^0.2.6",
+    "simple-facture-core": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/pdfmake": "^0.2.2"
+  },
+  "bin": {
+    "simple-facture": "./bin/simple-facture"
+  }
+}
