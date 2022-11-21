@@ -13,6 +13,7 @@
   "types": "dist/types.d.ts",
   "scripts": {
     "start": "ts-node src/main.ts",
+    "simple-facture-init": "ts-node src/init-invoice.ts",
     "build": "rollup -c rollup.config.js",
     "test": "echo \" no test yet\"",
     "lint": "eslint",

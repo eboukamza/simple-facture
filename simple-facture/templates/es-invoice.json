@@ -1,0 +1,39 @@
+{
+  "lang": "es-ES",
+  "number": "2023-001",
+  "purchaseOrder": "ref-xxx",
+  "date": "31/01/2023",
+  "company": {
+    "name": "Tu Sociedad",
+    "address": {
+      "street": "Calle de la riqueza, 10",
+      "zipCode": "28001",
+      "city": "Madrid"
+    },
+    "email": "tuemail@tusociedad.es",
+    "legalForm": "S.L.",
+    "vat": "B xxxxxxxxx",
+    "founds": "100",
+    "regNumber": "Registro Mercantil de Madrid, Tomo 1234, Folio 34, Hoja número M-23455, inscripción 2",
+    "iban": "FR00 1234 5678 9012 3456 7890 999"
+  },
+  "customer": {
+    "name": "Nombre del Cliente",
+    "address": {
+      "street": "Avenida del trabajo",
+      "zipCode": "28001",
+      "city": "Madrid"
+    },
+    "vat": "B-123456789"
+  },
+  "lines": [
+    {
+      "detail": "Concepto del servicico",
+      "endDate": "31/01/2020",
+      "price": 500,
+      "vat": 0.2,
+      "quantity": 20
+    }
+  ],
+  "paymentDelay": 30
+}

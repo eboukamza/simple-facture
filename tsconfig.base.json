@@ -16,7 +16,7 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "simple-facture-core": ["simple-facture-core/*/src"]
+      "simple-facture-core": ["simple-facture-core/src"]
     }
   },
   "exclude": [

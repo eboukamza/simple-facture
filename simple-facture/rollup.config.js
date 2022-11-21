@@ -29,5 +29,13 @@ export default [
       // convert commonjs modules to es6
       commonjs()
     ]
+  },
+  {
+    input: 'src/init-invoice.ts',
+    output: {file: 'dist/init.js', format: 'cjs'},
+    plugins: [
+      resolve(),
+      commonjs()
+    ]
   }
 ]

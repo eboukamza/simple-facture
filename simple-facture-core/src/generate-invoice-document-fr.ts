@@ -1,31 +1,13 @@
-import { Invoice, Line } from './models'
-import { getGrossTotal, getNetTotal, getVATTotal } from './calculator.utils'
 import { TDocumentDefinitions } from 'pdfmake/interfaces'
 
-const formatter = new Intl.NumberFormat('fr-FR', {
-  style: 'currency',
-  currency: 'EUR',
-  minimumFractionDigits: 2
-})
+import { Invoice } from './models'
+import { getGrossTotal, getNetTotal, getVATTotal } from './calculator.utils'
+import { buildUtils } from './print-invoice.utils'
 
-const RIGHT = 'right'
+const generateInvoiceDocumentFr = (invoice: Invoice): TDocumentDefinitions => {
 
-const NO_BREAK_SPACE = String.fromCodePoint(8239)
+  const { printLines, printPrice, RIGHT } = buildUtils(invoice.lang)
 
-const printPrice = (price: number) => formatter.format(price).replace(NO_BREAK_SPACE, ' ')
-const printPercent = (ratio: number) => ratio * 100 + ' %'
-
-const printLines = (lines: Line[]) =>
-  lines.map((line) => [
-    line.detail,
-    line.endDate,
-    printPrice(line.price),
-    line.quantity,
-    printPercent(line.vat),
-    { text: printPrice(line.quantity * line.price), alignment: RIGHT }
-  ])
-
-const getInvoiceDocument = (invoice: Invoice): TDocumentDefinitions => {
   return {
     content: [
       { text: `Facture nº ${invoice.number}`, style: 'h4' },
@@ -44,7 +26,6 @@ const getInvoiceDocument = (invoice: Invoice): TDocumentDefinitions => {
       { text: `TVA : ${invoice.customer.vat}`, alignment: RIGHT },
       '\n\n\n',
       '\n\n\n',
-
       {
         table: {
           headerRows: 1,
@@ -119,4 +100,4 @@ const getInvoiceDocument = (invoice: Invoice): TDocumentDefinitions => {
   }
 }
 
-export { getInvoiceDocument }
+export { generateInvoiceDocumentFr }

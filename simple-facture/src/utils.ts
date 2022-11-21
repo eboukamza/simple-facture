@@ -9,9 +9,10 @@ const checkDataDir = (dir: string) => {
   }
 }
 
-const checkDataFile = (file: string, initValue: string) => {
+const checkDataFile = (file: string) => {
   if (!fs.existsSync(file)) {
-    fs.writeFileSync(file, initValue, 'utf-8')
+    console.error('Missing invoice file. You should call "simple-invoice-generate" first')
+    process.exit(1);
   }
 }
 

@@ -1,6 +1,8 @@
 import { Line } from './line.model'
+import { Lang } from './lang'
 
 export interface Invoice {
+  lang: Lang
   number: string
   purchaseOrder: string
   date: string
@@ -13,11 +15,11 @@ export interface Invoice {
     }
     email: string
     legalForm: string
-    ape: string
+    ape?: string
     vat: string
     founds: string
     regNumber: string
-    siret: string
+    siret?: string
     iban: string
   }
   customer: {
