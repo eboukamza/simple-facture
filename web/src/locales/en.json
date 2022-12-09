@@ -1,0 +1,30 @@
+{
+  "invoice": {
+    "invoice": "invoice",
+    "number": "number",
+    "date": "date",
+    "emitter": "emitter",
+    "company": {
+      "name": "name",
+      "address": "address",
+      "zipCode": "zip code",
+      "city": "city",
+      "country": "country",
+      "email": "email",
+      "legalForm": "string",
+      "regNumber": "registration number",
+      "vat": "vat number"
+    },
+    "customer": "customer",
+    "line": {
+      "detail": "detail",
+      "endDate": "end date",
+      "price": "price",
+      "quantity": "quantity"
+    },
+    "vat": "vat %",
+    "iban": "iban",
+    "paymentDelay": "payment delay"
+
+  }
+}

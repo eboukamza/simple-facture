@@ -1,5 +1,6 @@
 import { Line } from './line.model'
 import { Lang } from './lang'
+import { Customer } from './customer.model'
 
 export interface Invoice {
   lang: Lang
@@ -22,15 +23,7 @@ export interface Invoice {
     siret?: string
     iban: string
   }
-  customer: {
-    name: string
-    address: {
-      street: string
-      zipCode: string
-      city: string
-    }
-    vat: string
-  }
+  customer: Customer
   lines: Line[]
   paymentDelay: number
 }

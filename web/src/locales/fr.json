@@ -1,0 +1,27 @@
+{
+  "invoice": {
+    "number": "numéro",
+    "date": "date",
+    "company": {
+      "name": "nom",
+      "address": "adresse",
+      "street": "Rue",
+      "zipCode": "code postal",
+      "city": "cité",
+      "country": "pays",
+      "email": "email",
+      "legalForm": "forme legal",
+      "regNumber": "registre"
+    },
+    "line": {
+      "detail": "désignation",
+      "endDate": "date de fin",
+      "price": "prix",
+      "quantity": "quantité"
+    },
+    "vat": "TVA",
+    "iban": "iban",
+    "paymentDelay": "delai de payment"
+
+  }
+}
