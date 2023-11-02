@@ -1,6 +1,6 @@
 {
   "name": "simple-facture",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Make french invoices as pdf with all legal requirements",
   "keywords": [
     "invoice",
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.3",
-    "jest": "^24.1.0"
+    "jest": "^29.7.0"
   },
   "jest": {
     "testEnvironment": "node",
