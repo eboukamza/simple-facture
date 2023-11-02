@@ -1,0 +1,41 @@
+version: 2
+
+node: &node
+  working_directory: ~/simple-facture
+  docker:
+    - image: cimg/node:16.13
+
+aliases:
+  - &restore_cache
+    restore_cache:
+      keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+
+jobs:
+  install:
+    <<: *node
+    steps:
+      - checkout
+      - *restore_cache
+      - run: yarn install --frozen-lockfile
+      - run: yarn audit --groups dependencies
+      - save_cache:
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+  test:
+    <<: *node
+    steps:
+      - checkout
+      - *restore_cache
+      - run: yarn coveralls
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
