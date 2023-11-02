@@ -1,27 +1,41 @@
 const { getNetTotal, getGrossTotal, getVATTotal} = require('./calculator.utils');
 
 const Intl = require("intl");
-const formatter = new Intl.NumberFormat('fr-FR', {
+const priceFormatter = new Intl.NumberFormat('fr-FR', {
   style: 'currency',
   currency: 'EUR',
   minimumFractionDigits: 2
 });
+const quantityFormatter = new Intl.NumberFormat('fr-FR')
 
 const RIGHT = 'right';
 
-const printPrice = (price) => formatter.format(price);
+const printPrice = (price) => priceFormatter.format(price);
 const printPercent = (ratio) => ratio * 100 + ' %';
 
 const printLines = (lines) => lines.map(line => [
   line.detail,
   line.endDate,
   printPrice(line.price),
-  line.quantity,
+  quantityFormatter.format(line.quantity),
   printPercent(line.vat),
   {text: printPrice(line.quantity * line.price), alignment: RIGHT}
   ]);
 
 const getInvoiceDocument = (invoice) => {
+
+  const footer = [
+    {text: `${invoice.company.name} - ${invoice.company.address.street} - ${invoice.company.address.zipCode} - ${invoice.company.address.country}`, alignment: 'center', style:'footer'}
+  ];
+
+  if(invoice.company.legalForm) {
+    footer.push(
+      {text: `Siret : ${invoice.company.siret} - APE : ${invoice.company.ape} - ${invoice.company.regNumber} - TVA :  ${invoice.company.vat}`, alignment: 'center', style:'footer'},
+      {text: `${invoice.company.legalForm} au capital de ${invoice.company.founds} €`, alignment: 'center', style:'footer'}
+    )
+  } else {
+    footer.push({text: `TVA :  ${invoice.company.vat}`, alignment: 'center', style:'footer'})
+  }
 
   return {
     content: [
@@ -33,11 +47,14 @@ const getInvoiceDocument = (invoice) => {
       `${invoice.company.name}`,
       `${invoice.company.address.street}`,
       `${invoice.company.address.zipCode}, ${invoice.company.address.city}`,
+      `${invoice.company.address.country}`,
       `${invoice.company.email}`,
+      `TVA: ${invoice.company.vat}`,
       {text: 'Client', alignment: RIGHT, style: 'h4'},
       {text: invoice.customer.name, alignment: RIGHT},
       {text: invoice.customer.address.street, alignment: RIGHT},
       {text: `${invoice.customer.address.zipCode} ${invoice.customer.address.city}`, alignment: RIGHT},
+      {text: `${invoice.customer.address.country}`, alignment: RIGHT},
       {text: `TVA : ${invoice.customer.vat}`, alignment: RIGHT},
       '\n\n\n',
       '\n\n\n',
@@ -78,11 +95,7 @@ const getInvoiceDocument = (invoice) => {
       'Les pénalités de retard sont exigibles sans qu\'un rappel soit nécessaire.',
 
     ],
-    footer: [
-      {text: `${invoice.company.name} - ${invoice.company.address.street} - ${invoice.company.address.zipCode} - France`, alignment: 'center', style:'footer'},
-      {text: `Siret : ${invoice.company.siret} - APE : ${invoice.company.ape} - TVA :  ${invoice.company.vat} - ${invoice.company.regNumber}`, alignment: 'center', style:'footer'},
-      {text: `${invoice.company.legalForm} au capital de ${invoice.company.founds} €`, alignment: 'center', style:'footer'},
-      ],
+    footer,
     pageMargins: [ 40, 80, 40, 60 ],
     defaultStyle: {
       fontSize: 10,

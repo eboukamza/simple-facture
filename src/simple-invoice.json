@@ -1,5 +1,5 @@
 {
-  "number": "2020-001",
+  "number": "2023-001",
   "purchaseOrder": "ref-xxx",
   "date": "31/01/2020",
   "company": {
@@ -7,23 +7,25 @@
     "address": {
       "street": "10 rue de la victoire",
       "zipCode": "75000",
-      "city": "Paris"
+      "city": "Paris",
+      "country": "France"
     },
     "email": "tonemail@tasociete.fr",
+    "vat": "FRXX xxxxxxxxx",
+    "iban": "FR00 1234 5678 9012 3456 7890 999",
     "legalForm": "EURL",
     "ape": "0000X",
-    "vat": "FRXX xxxxxxxxx",
     "founds": "100",
     "regNumber": "RCS Paris xxx xxx xxx",
-    "siret": "xxx xxx xxx xxxxx",
-    "iban": "FR00 1234 5678 9012 3456 7890 999"
+    "siret": "xxx xxx xxx xxxxx"
   },
   "customer": {
     "name": "Le nom du client",
     "address": {
       "street": "10 rue du boulot",
       "zipCode": "75000",
-      "city": "Paris"
+      "city": "Paris",
+      "country": "France"
     },
     "vat": "FR12 123 456 789"
   },
